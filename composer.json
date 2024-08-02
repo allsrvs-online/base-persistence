@@ -1,0 +1,42 @@
+{
+  "name": "allsrvs-online/base-persistence",
+  "description": "Base Persistence Library",
+  "type": "library",
+  "version": "1.0",
+  "minimum-stability": "stable",
+  "keywords": [ "persistence", "entity", "json", "model" ],
+  "homepage": "https://allsrvs.online/",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Theo Hollenberg",
+      "email": "theo@hollenberg.eu",
+      "role": "Lead Developer"
+    }
+  ],
+  {
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/allsrvs-online/base-entity"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "ext-json": "*",
+    "allsrvs-online/base-entity": "latest"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.6",
+    "phpunit/php-code-coverage": "^9.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "AllSrvs\\": "src/",
+      "Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit --colors=always --testdox --coverage-text=coverage.txt tests"
+  }
+}
